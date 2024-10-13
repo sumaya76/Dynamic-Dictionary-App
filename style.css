@@ -1,0 +1,204 @@
+/* Root variables for colors */
+:root {
+    --primary-color: #2d629a; 
+    --hover-color: #1a4476;
+    --text-color: #333;
+    --highlight-color: #00796b;
+    --focus-color: rgba(0, 150, 136, 0.6);
+    --button-hover-color: #54c1b0; /* Lighter hover color for the button */
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6); /* Darken the background slightly */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container styling */
+.container {
+    background: linear-gradient(135deg, var(--primary-color), var(--highlight-color));
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add round logo styling */
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border: 3px solid white; /* Adding a white border around the logo */
+}
+
+/* Hover effect for container */
+.container:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styles */
+.heading {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Underline animation for heading */
+.heading::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: white;
+    animation: slideIn 1s ease forwards;
+}
+
+/* Input box styling */
+.input {
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    padding: 0 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Focus and hover state for input */
+.input:focus, .input:hover {
+    border-color: var(--focus-color);
+    box-shadow: 0 6px 10px rgba(0, 150, 136, 0.2); /* Slight shadow on focus */
+    outline: none;
+}
+
+/* Info text */
+.info-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Meaning container styles */
+.meaning-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Text and label styles within the meaning container */
+.meaning-container p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.meaning-container span {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+/* Audio control */
+audio {
+    margin-top: 20px;
+}
+
+/* Loading spinner */
+#loading {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Hover button animation */
+button {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { width: 0; }
+    to { width: 100px; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+        font-size: 16px;
+    }
+
+    .input {
+        font-size: 14px;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .meaning-container p {
+        font-size: 16px;
+    }
+}

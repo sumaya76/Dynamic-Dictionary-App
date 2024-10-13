@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/dictinory.jpg" alt="Logo" class="logo"> <!-- Add your logo here -->
+      <h1 class="heading">English Dictionary</h1>
+      <input placeholder="Search a word....." type="text" class="input" id="input" />
+      <p class="info-text" id="info-text">Type a word and press enter</p>
+      
+      <!-- Loading spinner -->
+      <div id="loading" style="display: none;">
+        <p>Loading...</p>
+      </div>
+
+      <div class="meaning-container" id="meaning-container" style="display: none;">
+        <p>Word Title: <span class="title" id="title">Not available</span></p>
+        <p>Part of Speech: <span class="part-of-speech" id="part-of-speech">Not available</span></p>
+        <p>Meaning: <span class="meaning" id="meaning">Not available</span></p>
+        
+        <p>Synonyms: <span class="synonyms" id="synonyms">Not available</span></p>
+        <p>Antonyms: <span class="antonyms" id="antonyms">Not available</span></p>
+       
+        <audio src="" controls id="audio" style="display: none;"></audio>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
